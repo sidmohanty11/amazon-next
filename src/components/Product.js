@@ -20,7 +20,9 @@ const Product = ({ title, id, price, description, category, image }) => {
           price,
           description,
           category,
-          image,
+            image,
+            rating,
+          hasPrime
         };
         //sending the product as an action to redux store!
         dispatch(addToBasket(product));
