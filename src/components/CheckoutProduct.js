@@ -18,6 +18,7 @@ const CheckoutProduct = ({ title, rating, id, price, description, category, imag
           category,
           image,
           hasPrime,
+          key,
         };
         dispatch(addToBasket(product));
     }
