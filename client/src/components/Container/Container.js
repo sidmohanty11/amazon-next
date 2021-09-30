@@ -4,10 +4,9 @@ const Container = ({ children }) => {
   return (
     <div
       style={{
-        width: "100%",
-        margin: "auto",
-        display: "flex",
-        justifyContent: "center",
+        display: "grid",
+        placeItems: "center",
+        gridTemplateColumns: "1fr 1fr 1fr 1fr",
       }}
     >
       {children}
