@@ -28,6 +28,9 @@ const Nav = () => {
         <Link to="/cart" className="navbar__list_item">
           <li>Cart</li>
         </Link>
+        <Link to="/products" className="navbar__list_item">
+          <li>Products</li>
+        </Link>
         <Link to="/login" className="navbar__list_item">
           <li>Login</li>
         </Link>
