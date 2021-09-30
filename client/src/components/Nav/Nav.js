@@ -1,10 +1,13 @@
 import "./Nav.css";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <nav className="navbar">
-      <h1>Amazonly</h1>
+      <Link to="/" className="navbar__header">
+        <h1>Amazonly</h1>
+      </Link>
       <div className="navbar__search">
         <svg
           width="24"
@@ -22,12 +25,12 @@ const Nav = () => {
         />
       </div>
       <ul className="navbar__list">
-        <a href="/" className="navbar__list_item">
+        <Link to="/cart" className="navbar__list_item">
           <li>Cart</li>
-        </a>
-        <a href="/" className="navbar__list_item">
+        </Link>
+        <Link to="/login" className="navbar__list_item">
           <li>Login</li>
-        </a>
+        </Link>
       </ul>
     </nav>
   );
