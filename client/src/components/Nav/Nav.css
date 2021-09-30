@@ -11,6 +11,11 @@
   display: flex;
 }
 
+.navbar__header {
+  text-decoration: none;
+  color: #cebc81;
+}
+
 .navbar__search {
   display: flex;
   text-align: center;
@@ -43,4 +48,5 @@
 .navbar__list_item:hover {
   background-color: #cebc81;
   color: black;
+  transition: all 0.3s;
 }
