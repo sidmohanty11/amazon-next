@@ -24,7 +24,7 @@ const Signup = () => {
         />
         <p>
           Already have an account?{" "}
-          <Link to="/signup" style={{ color: "#19181a" }}>
+          <Link to="/login" style={{ color: "#19181a" }}>
             Login
           </Link>
         </p>

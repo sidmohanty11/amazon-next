@@ -34,15 +34,27 @@
 
 .navbar__list_item {
   margin: 0 20px;
-  padding: 5px 25px;
+  padding: 5px 20px;
   text-decoration: none;
   color: #cebc81;
   border-radius: 2px;
 }
 
 .navbar__list_item:nth-child(2) {
+  position: relative;
   background-color: #a16e83;
   color: black;
+}
+
+.navbar__list_item_badge {
+  position: absolute;
+  top: 2px;
+  left: 13px;
+  border-radius: 100%;
+  padding: 2px;
+  background-color: #19181a;
+  color: #cebc81;
+  font-size: 15px;
 }
 
 .navbar__list_item:hover {

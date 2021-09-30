@@ -4,10 +4,10 @@ import Card from "../Card/Card";
 import Star from "../Star/Star";
 import "./ProductCard.css";
 
-const ProductCard = ({ source, name, price, rating }) => {
+const ProductCard = ({ source, name, price, rating, id }) => {
   return (
     <Card>
-      <Link to="/" style={{ textDecoration: "none" }}>
+      <Link to={`/products/${id}`} style={{ textDecoration: "none" }}>
         <img src={source} height={400} width={300} alt="" />
         <p className="product__link">{name}</p>
         <p className="product__link">
