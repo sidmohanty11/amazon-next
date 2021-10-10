@@ -1,16 +1,13 @@
 import "./Nav.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import CartIcon from "../Cart/CartIcon";
+import { Cart2 } from "@styled-icons/bootstrap/Cart2";
 
 const Nav = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar__header">
-        <h1>
-          <CartIcon color="#cebc81" />
-          Amazonly
-        </h1>
+        <h1>Amazonly</h1>
       </Link>
       <div className="navbar__search">
         <svg
@@ -29,16 +26,17 @@ const Nav = () => {
         />
       </div>
       <ul className="navbar__list">
+        <Link to="/login" className="navbar__list_item">
+          <li>Login</li>
+        </Link>
         <Link to="/products" className="navbar__list_item">
           <li>Products</li>
         </Link>
         <Link to="/cart" className="navbar__list_item">
           <li>
-            <CartIcon />
+            <Cart2 size={24} style={{ color: "#cebc81" }} />
+            <span className="navbar__list_item_badge">1</span>
           </li>
-        </Link>
-        <Link to="/login" className="navbar__list_item">
-          <li>Login</li>
         </Link>
       </ul>
     </nav>
