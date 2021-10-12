@@ -2,17 +2,16 @@ import React from "react";
 import "./ProductReview.css";
 import Star from "../Star/Star";
 
-const ProductReview = () => {
+const ProductReview = ({ review }) => {
   return (
     <div className="product_review">
-      <h4>username</h4>
+      <h4>{review.username}</h4>
       <p>
-        <Star />
-        <Star />
-        <Star />
-        <Star />
+        {Array.from({ length: parseInt(review.rating) }, (_, i) => (
+          <Star key={`star_${i + 1}`} />
+        ))}
       </p>
-      <p>lorem ipsum</p>
+      <p>{review.content}</p>
     </div>
   );
 };

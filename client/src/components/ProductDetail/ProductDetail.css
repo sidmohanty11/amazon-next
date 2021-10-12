@@ -23,6 +23,7 @@
 }
 
 .product_detail__sub_container {
+  margin: 20px;
   height: 300px;
   display: flex;
   flex-direction: column;

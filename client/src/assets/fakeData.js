@@ -4,6 +4,7 @@ export const products = [
     name: "Professionals 1",
     price: "1999",
     rating: "4",
+    qty: 1,
     categories: ["shoe", "nike"],
     description:
       "Nike Air is our iconic innovation that uses pressurized air in a durable, flexible membrane to provide lightweight cushioning. The air compresses on impact and then immediately returns to its original shape and volume, ready for the next impact.",
@@ -16,6 +17,7 @@ export const products = [
     name: "Professionals 2",
     price: "2999",
     rating: "4",
+    qty: 1,
     categories: ["shoe", "nike"],
     description:
       "Nike Air is our iconic innovation that uses pressurized air in a durable, flexible membrane to provide lightweight cushioning. The air compresses on impact and then immediately returns to its original shape and volume, ready for the next impact.",
@@ -28,6 +30,7 @@ export const products = [
     name: "Professionals 3",
     price: "1799",
     rating: "5",
+    qty: 1,
     categories: ["shoe", "nike"],
     description:
       "Nike Air is our iconic innovation that uses pressurized air in a durable, flexible membrane to provide lightweight cushioning. The air compresses on impact and then immediately returns to its original shape and volume, ready for the next impact.",
@@ -40,6 +43,7 @@ export const products = [
     name: "Professionals 4",
     price: "2099",
     rating: "3",
+    qty: 1,
     categories: ["shoe", "nike"],
     description:
       "Nike Air is our iconic innovation that uses pressurized air in a durable, flexible membrane to provide lightweight cushioning. The air compresses on impact and then immediately returns to its original shape and volume, ready for the next impact.",
@@ -52,6 +56,7 @@ export const products = [
     name: "Checked Shirt",
     price: "999",
     rating: "4",
+    qty: 1,
     categories: ["shirt", "checked"],
     description:
       "A shirt is a cloth garment for the upper body (from the neck to the waist). Originally an undergarment worn exclusively by men, it has become, in American English, a catch-all term for a broad variety of upper-body garments and undergarments.",
@@ -64,6 +69,7 @@ export const products = [
     name: "Zebra Shirt",
     price: "1999",
     rating: "3",
+    qty: 1,
     categories: ["shirt", "zebra"],
     description:
       "A shirt is a cloth garment for the upper body (from the neck to the waist). Originally an undergarment worn exclusively by men, it has become, in American English, a catch-all term for a broad variety of upper-body garments and undergarments.",
@@ -76,6 +82,7 @@ export const products = [
     name: "Indian Shirt",
     price: "1599",
     rating: "5",
+    qty: 1,
     categories: ["shirt", "indian"],
     description:
       "A shirt is a cloth garment for the upper body (from the neck to the waist). Originally an undergarment worn exclusively by men, it has become, in American English, a catch-all term for a broad variety of upper-body garments and undergarments.",
@@ -88,6 +95,7 @@ export const products = [
     name: "Solid Shirt",
     price: "1999",
     rating: "5",
+    qty: 1,
     categories: ["shirt", "solid"],
     description:
       "A shirt is a cloth garment for the upper body (from the neck to the waist). Originally an undergarment worn exclusively by men, it has become, in American English, a catch-all term for a broad variety of upper-body garments and undergarments.",
@@ -100,6 +108,7 @@ export const products = [
     name: "Grey Formal Pant",
     price: "1999",
     rating: "5",
+    qty: 1,
     categories: ["pant", "formal", "solid"],
     description:
       "trousers, also spelled trowsers, also called pants or slacks, an outer garment covering the lower half of the body from the waist to the ankles and divided into sections to cover each leg separately.",
@@ -112,6 +121,7 @@ export const products = [
     name: "Black Formal Pant",
     price: "2499",
     rating: "4",
+    qty: 1,
     categories: ["pant", "solid", "formal"],
     description:
       "trousers, also spelled trowsers, also called pants or slacks, an outer garment covering the lower half of the body from the waist to the ankles and divided into sections to cover each leg separately.",
@@ -124,6 +134,7 @@ export const products = [
     name: "Suit Pant",
     price: "2999",
     rating: "5",
+    qty: 1,
     categories: ["suit", "pant", "formal"],
     description:
       "trousers, also spelled trowsers, also called pants or slacks, an outer garment covering the lower half of the body from the waist to the ankles and divided into sections to cover each leg separately.",
@@ -136,6 +147,7 @@ export const products = [
     name: "Comedy Pant",
     price: "999",
     rating: "2",
+    qty: 1,
     categories: ["pant", "printed"],
     description:
       "trousers, also spelled trowsers, also called pants or slacks, an outer garment covering the lower half of the body from the waist to the ankles and divided into sections to cover each leg separately.",

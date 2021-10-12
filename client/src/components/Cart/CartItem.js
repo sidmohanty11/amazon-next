@@ -2,19 +2,30 @@ import React from "react";
 import "./CartItem.css";
 import { PlusSquare } from "@styled-icons/feather/PlusSquare";
 import { MinusSquare } from "@styled-icons/feather/MinusSquare";
+import { addToCart, removeFromCart } from "../../store/reducers/cartSlice";
+import { useDispatch } from "react-redux";
 
-const CartItem = () => {
+const CartItem = ({ item }) => {
+  const dispatch = useDispatch();
   return (
     <div className="cart__container_item">
-      <img src="./shoe1.jpg" alt="" height={200} width={200} />
+      <img src={item.imageUrl} alt="" height={200} width={200} />
       <p>lorem ipsum</p>
       <div>
-        <PlusSquare size={30} style={{ marginRight: "10px" }} />
-        <span>1</span>
-        <MinusSquare size={30} style={{ marginLeft: "10px" }} />
+        <PlusSquare
+          size={30}
+          style={{ marginRight: "10px" }}
+          onClick={() => dispatch(addToCart)}
+        />
+        <span>{item.qty}</span>
+        <MinusSquare
+          size={30}
+          style={{ marginLeft: "10px" }}
+          onClick={() => dispatch(removeFromCart)}
+        />
       </div>
       <div>
-        <p>&#8377; 1299</p>
+        <p>&#8377; {item.price}</p>
       </div>
     </div>
   );
