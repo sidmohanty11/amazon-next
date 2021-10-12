@@ -13,6 +13,12 @@ app.get("/api/v1/products", (req, res) => {
   res.send(products);
 });
 
+app.get("/api/v1/products/:id", (req, res) => {
+  const { id } = req.params;
+  const product = products.find((p) => p.id == id);
+  res.send(product);
+});
+
 app.get("/", (req, res) => {
   res.send("hello world");
 });
