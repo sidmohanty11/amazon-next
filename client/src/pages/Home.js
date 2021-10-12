@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import CustomCarousel from "../components/Carousel/Carousel";
 import Container from "../components/Container/Container";
 import ProductCard from "../components/ProductCard/ProductCard";
-import axios from "../axios";
+import { useSelector, useDispatch } from "react-redux";
 import { Loader } from "@styled-icons/boxicons-regular/Loader";
+import { getData, selectProducts } from "../store/reducers/dataSlice";
+import axios from "../axios";
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
+  const products = useSelector(selectProducts);
+  const dispatch = useDispatch();
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -16,16 +20,16 @@ const Home = () => {
         setLoading(true);
         const { data } = await axios.get("/api/v1/products");
         if (data) {
-          setProducts(data);
-          setLoading(false);
+          dispatch(getData(data));
         }
+        setLoading(false);
       } catch (err) {
         setError(err.message);
         setLoading(false);
       }
     }
     getProducts();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>

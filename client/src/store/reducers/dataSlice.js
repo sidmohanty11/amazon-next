@@ -1,18 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { products } from "../../assets/fakeData";
 
-const initialState = {};
+const initialState = {
+  products: [],
+};
 
 export const dataSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
-    getData() {
-      return { products };
+    getData(state, action) {
+      state.products = action.payload;
     },
   },
 });
 
-export const {} = dataSlice.actions;
+export const { getData } = dataSlice.actions;
+
+export const selectProducts = (state) => state.dataSlice.products;
 
 export default dataSlice.reducer;

@@ -3,9 +3,13 @@ import Container from "../components/Container/Container";
 import ProductCard from "../components/ProductCard/ProductCard";
 import axios from "../axios";
 import { Loader } from "@styled-icons/boxicons-regular/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { getData, selectProducts } from "../store/reducers/dataSlice";
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  const products = useSelector(selectProducts);
+  const dispatch = useDispatch();
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -15,16 +19,16 @@ const Products = () => {
         setLoading(true);
         const { data } = await axios.get("/api/v1/products");
         if (data) {
-          setProducts(data);
-          setLoading(false);
+          dispatch(getData(data));
         }
+        setLoading(false);
       } catch (err) {
         setError(err.message);
         setLoading(false);
       }
     }
     getProducts();
-  }, []);
+  }, [dispatch]);
 
   return (
     <Container>
