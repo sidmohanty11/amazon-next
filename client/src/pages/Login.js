@@ -18,7 +18,7 @@ const Login = () => {
           placeholder="password"
         />
         <p>
-          Don't have an account yet?{" "}
+          Don&apos;t have an account yet?{" "}
           <Link to="/signup" style={{ color: "#19181a" }}>
             Signup
           </Link>
