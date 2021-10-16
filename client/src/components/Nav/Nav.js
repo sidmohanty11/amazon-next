@@ -2,11 +2,20 @@ import React from "react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 import { Cart2 } from "@styled-icons/bootstrap/Cart2";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectTotalItems } from "../../store/reducers/cartSlice";
+import {
+  searchProducts,
+  // selectSearchedProducts,
+} from "../../store/reducers/dataSlice";
 
 const Nav = () => {
   const totalItems = useSelector(selectTotalItems);
+  // const searchItems = useSelector(selectSearchedProducts);
+  const dispatch = useDispatch();
+
+  // console.log(searchItems);
+
   return (
     <nav className="navbar">
       <Link to="/" className="navbar__header">
@@ -25,6 +34,7 @@ const Nav = () => {
         <input
           className="navbar__search_input"
           type="text"
+          // onChange={(e) => dispatch(searchProducts(e.target.value))}
           placeholder="search"
         />
       </div>
