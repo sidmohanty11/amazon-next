@@ -15,13 +15,13 @@ const CartItem = ({ item }) => {
         <PlusSquare
           size={30}
           style={{ marginRight: "10px" }}
-          onClick={() => dispatch(addToCart)}
+          onClick={() => dispatch(addToCart(item))}
         />
         <span>{item.qty}</span>
         <MinusSquare
           size={30}
           style={{ marginLeft: "10px" }}
-          onClick={() => dispatch(removeFromCart)}
+          onClick={() => dispatch(removeFromCart(item))}
         />
       </div>
       <div>

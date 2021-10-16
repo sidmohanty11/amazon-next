@@ -3,10 +3,10 @@ import "./Nav.css";
 import { Link } from "react-router-dom";
 import { Cart2 } from "@styled-icons/bootstrap/Cart2";
 import { useSelector } from "react-redux";
-import { selectItems } from "../../store/reducers/cartSlice";
+import { selectTotalItems } from "../../store/reducers/cartSlice";
 
 const Nav = () => {
-  const items = useSelector(selectItems);
+  const totalItems = useSelector(selectTotalItems);
   return (
     <nav className="navbar">
       <Link to="/" className="navbar__header">
@@ -38,7 +38,7 @@ const Nav = () => {
         <Link to="/cart" className="navbar__list_item">
           <li>
             <Cart2 size={24} style={{ color: "#cebc81" }} />
-            <span className="navbar__list_item_badge">{items.length}</span>
+            <span className="navbar__list_item_badge">{totalItems}</span>
           </li>
         </Link>
       </ul>

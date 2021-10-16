@@ -42,5 +42,7 @@ export const selectTotal = (state) =>
     (total, item) => total + item.price * item.qty,
     0
   );
+export const selectTotalItems = (state) =>
+  state.cartSlice.items.reduce((total, item) => total + item.qty, 0);
 
 export default cartSlice.reducer;
